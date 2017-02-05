@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app='humaneApp'>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700" rel="stylesheet">
+    <link rel='stylesheet' href='./css/style.css' />
+    <link rel='stylesheet' href='./font-awesome/css/font-awesome.css' />
+    <link rel='stylesheet' href='../css/animate.min.css' />
+</head>
+
+<body ng-controller='mainCtrl'>
+
+    <nav class='navbar navbar-fixed-top'>
+
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navigation">
+      &#9776;
+    </button>
+
+        <a class='navbar-brand float-xs-right float-sm-left' ui-sref='home'><img src='img/logo-small.png' class='img-fluid' /> </a>
+        <div class="collapse navbar-toggleable-xs" id="navigation">
+            <ul class="nav navbar-nav float-sm-right">
+                <li class='nav-item'>
+                    <a class='nav-link' ui-sref='adopt'>ADOPT</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link' ui-sref='clinic'>CLINIC</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link' ui-sref='donations'>DONATE</a>
+                </li>
+                <li class='nav-item'>
+                    <a class='nav-link' href='#social'>CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ui-view></ui-view>
+    <!-- END SOCIAL -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            mobile: false // default
+        })
+        wow.init();
+    </script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src='./js/app.js'></script>
+    <script src='./js/mainCtrl.js'></script>
+    <script src='./js/mainService.js'></script>
+
+</body>
+
+</html>

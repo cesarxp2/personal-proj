@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html ng-app='humaneApp'>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700" rel="stylesheet">
+    <link rel='stylesheet' href='../css/style.css' />
+    <link rel='stylesheet' href='./font-awesome/css/font-awesome.css' />
+    <link rel="stylesheet" href="../font-awesome-animation/dist/font-awesome-animation.min.css" />
+    <link rel='stylesheet' href='./css/animate.min.css' />
+</head>
+
+<body ng-controller='mainCtrl'>
+
+    <!-- HEADER -->
+    <section id='header'>
+        <div class='container'>
+            <div class='row wow fadeIn' data-wow-delay='.2s' data-wow-duration='2s'>
+
+                <div class='col-md-6'>
+                    <img src='img/humane-logo.png' class='img-fluid' />
+                    <h2> RESCUE IS MY FAVORITE BREED!</h2>
+                    <p class='lead'>
+                        Founded in 1960, the Humane Society of Utah (HSU) has always fostered an atmosphere of love, compassion and respect for all animals. Our mission statement is that we are dedicated to the elimination of pain, fear and suffering in all animals.
+                    </p>
+
+                </div>
+                <div class='col-md-6 header-right'>
+                    <p>
+                        WANT TO GET INVOLVED? <br/> Enter your information to stay up to date about off-site adoption events, special events, and anything else going on!
+                    </p>
+                    <form>
+                        <fieldset class='form-group'>
+                            <label class='sr-only'>Name</label>
+                            <input type='text' class='form-control' placeholder="Your name" ng-model='name' />
+                        </fieldset>
+                        <fieldset class='form-group'>
+                            <label class='sr-only'>Email</label>
+                            <input type='text' class='form-control' placeholder="Your email" ng-model='email' />
+                        </fieldset>
+                        <button type='submit' ng-click='twoMethods(name,email)' class='btn btn-outline-info btn-block' ng-model='toggle' ng-hide='toggle'>Sign Up!</button>
+                        <div class="alert alert-success" role="alert" data-dismiss="alert" ng-show='toggle'>
+                            <strong>THANK YOU!</strong> You successfully signed up for our newsletter! </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-12 text-xs-center'>
+                    <a ng-click="scrollTo('adopt')"><i class="fa fa-paw faa-bounce animated fa-3x"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END HEADER -->
+
+    <!-- ADOPT -->
+    <section id='adopt'>
+        <div class='container'>
+            <div class='row'>
+
+                <div class='col-md-12'>
+                    <h2> FEATURED FURRY FRIENDS </h2>
+                    <hr align='left' width='30%' />
+                </div>
+            </div>
+
+            <div class='row'>
+
+                <div class='col-md-3 col-sm-6 wow fadeInLeft' data-wow-duration='2.5s'>
+                    <div class="card">
+                        <div class='adopt-img'>
+                            <a href='#'> <img class="card-img-top img-fluid" src='img/img5.jpg' alt="Card image cap">
+                                <div class='img-overlay'>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">Rocky</h4>
+                            <p class="card-text">Pitbull <br/> Rocky is a misundersdtood beauty, get ready to cuddle!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-md-3 col-sm-6 wow fadeInLeft' data-wow-duration='2.5s'>
+                    <div class="card">
+                        <div class='adopt-img'>
+                            <a href='#'> <img class="card-img-top img-fluid" src='img/img6.jpg' alt="Card image cap">
+                                <div class='img-overlay'>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">Winston</h4>
+                            <p class="card-text">Doberman<br/> This special guard dog will keep your house safe</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-md-3 col-sm-6 wow fadeInRight' data-wow-duration='2.5s'>
+                    <div class="card">
+                        <div class='adopt-img'>
+                            <a href='#'> <img class="card-img-top img-fluid" src='img/img7.jpg' alt="Card image cap">
+                                <div class='img-overlay'>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">Lola</h4>
+                            <p class="card-text">Basset Hound <br/> Lookin' for treasure? Lola can sniff it for ya!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-md-3 col-sm-6 wow fadeInRight' data-wow-duration='2.5s'>
+                    <div class="card">
+                        <div class='adopt-img'>
+                            <a href='#'> <img class="card-img-top img-fluid" src='img/img8.jpg' alt="Card image cap">
+                                <div class='img-overlay'>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">Max</h4>
+                            <p class="card-text">Chocolate Lab <br/> Hope you have lots of toys because Max is ready!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class='row'>
+
+                <div class='col-md-3 col-sm-6 wow fadeInLeft' data-wow-duration='2.5s'>
+                    <div class="card">
+                        <div class='adopt-img'>
+                            <a href='#'> <img class="card-img-top img-fluid" src='img/img1.jpg' alt="Card image cap">
+                                <div class='img-overlay'>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">Mr. Bigglesworth</h4>
+                            <p class="card-text">Domestic Short Hair <br/> Loves to lay by the window and admire the weather </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-md-3 col-sm-6 wow fadeInLeft' data-wow-duration='2.5s'>
+                    <div class="card">
+                        <div class='adopt-img'>
+                            <a href='#'> <img class="card-img-top img-fluid" src='img/img2.jpg' alt="Card image cap">
+                                <div class='img-overlay'>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">Betsy</h4>
+                            <p class="card-text">Domestic Short Hair <br/> She's an active girl and will chase around the toy mouse for hours!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-md-3 col-sm-6 wow fadeInRight' data-wow-duration='2.5s'>
+                    <div class="card">
+                        <div class='adopt-img'>
+                            <a href='#'> <img class="card-img-top img-fluid" src='img/img3.jpg' alt="Card image cap">
+                                <div class='img-overlay'>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">Katana</h4>
+                            <p class="card-text"> Domestic Short Hair <br/> Great with kids and loves to cuddle at night</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='col-md-3 col-sm-6 wow fadeInRight' data-wow-duration='2.5s'>
+                    <div class="card">
+                        <div class='adopt-img'>
+                            <a href='#'> <img class="card-img-top img-fluid" src='img/img4.jpg' alt="Card image cap">
+                                <div class='img-overlay'>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <h4 class="card-title">Felix</h4>
+                            <p class="card-text">Domestic Short Hair <br/> Felix might be older but is wiser than any other cat!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button type="button" class="btn btn-warning" ui-sref='adopt'>More furry friends!</button>
+        </div>
+    </section>
+    <!-- END ADOPT -->
+
+    <!-- CLINIC -->
+
+    <section id='clinic'>
+        <div class='container text-xs-center'>
+
+            <div class='row'>
+                <div class='col-md-12 wow slideInUp' data-wow-delay='.2s' data-wow-duration='2s'>
+                    <h2> CLINIC </h2>
+                    <hr width='30%' />
+                    <img src='./img/clinic.jpg' class='img-fluid' />
+                </div>
+            </div>
+
+            <div class='row'>
+                <div class='col-md-3 wow slideInUp' data-wow-delay='.1s' data-wow-duration='1.5s'>
+                    <i class="fa fa-user-md fa-3x" aria-hidden="true"></i>
+                    <p> Vaccinations are available on a walk-in basis. </p>
+                </div>
+                <div class='col-md-3 wow slideInUp' data-wow-delay='.3s' data-wow-duration='1.5s'>
+                    <i class="fa fa-stethoscope fa-3x" aria-hidden="true"></i>
+                    <p> We offer spay/neuter services for a low price! </p>
+                </div>
+                <div class='col-md-3 wow slideInUp' data-wow-delay='.5s' data-wow-duration='1.5s'>
+                    <i class="fa fa-heart fa-3x" aria-hidden="true"></i>
+                    <p> Keep track of your pet! Microchips are also available on a walk-in basis </p>
+                </div>
+                <div class='col-md-3 wow slideInUp' data-wow-delay='.7s' data-wow-duration='1.5s'>
+                    <i class="fa fa-hospital-o fa-3x" aria-hidden="true"></i>
+                    <p> Other services such as, nail clipping, heartworm testing, and anal gland expression </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END CLINIC -->
+
+    <!-- DONATE -->
+    <section id='donate'>
+        <div class='container'>
+            <div class='row'>
+
+                <div class='col-md-6'>
+                    <h2>DONATE</h2>
+                    <hr align='left' width='50%' />
+                    <p class='lead'>
+                        There are many different ways that you can support our mission well into the future.
+                    </p>
+                    <p>
+                        Your donation helps us protect animals facing abuse and neglect across the country and around the world. Be a hero for animals. Donate today.
+                    </p>
+                    <button type="button" class="btn btn-danger" ui-sref='donations'>Save a Life</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END DONATE-->
+
+    <!-- CUSTOMERS -->
+
+    <section id='customers'>
+        <div class='container text-xs-center'>
+
+            <div class='row'>
+                <div class='col-md-12'>
+                    <h2>CUSTOMER REVIEWS</h2>
+                    <hr width='30%' />
+                    <p> Read what some of our customers had to say about our clinic and services</p>
+                </div>
+            </div>
+
+            <div class='row'>
+                <div class='col-md-12'>
+                    <div id="quotes" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#quotes" data-slide-to="0" class="active"></li>
+                            <li data-target="#quotes" data-slide-to="1"></li>
+                            <li data-target="#quotes" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <blockquote class="blockquote blockquote-reverse col-md-4">
+                                    <p class="mb-0">They always cut my Foxy Bear's nails and are always careful and sweet to my doggo even if she spazes out a bit. Thank you for taking care of my baby!.</p>
+                                    <footer class="blockquote-footer">Doug M. <cite title="Source Title">Yelp.com </cite></footer>
+                                </blockquote>
+                                <blockquote class="blockquote blockquote-reverse col-md-4">
+                                    <p class="mb-0">They are so fast and friendly and my dogs are in and out.</p>
+                                    <footer class="blockquote-footer">Brett C. <cite title="Source Title">Yelp.com </cite></footer>
+                                </blockquote>
+                                <blockquote class="blockquote blockquote-reverse col-md-4">
+                                    <p class="mb-0">The place was very clean, the staff was friendly and willing to answer any questions. A couple of nurses even recognized my dog post adoption 2 months later. </p>
+                                    <footer class="blockquote-footer">Bri R.<cite title="Source Title">Yelp.com </cite></footer>
+                                </blockquote>
+                            </div>
+                            <div class="carousel-item">
+                                <blockquote class="blockquote blockquote-reverse col-md-4">
+                                    <p class="mb-0">I had a wonderful experience. Filling out paperwork was quick and easy. The staff was pleasant and got us in and out in 15 minutes. The price was very reasonable.</p>
+                                    <footer class="blockquote-footer">Scott G.<cite title="Source Title">Yelp.com </cite></footer>
+                                </blockquote>
+                                <blockquote class="blockquote blockquote-reverse col-md-4">
+                                    <p class="mb-0">Courtesy workers and we got in really quick and the price of the vaccinations were more than reasonable.</p>
+                                    <footer class="blockquote-footer">Cesar G.<cite title="Source Title">Yelp.com </cite></footer>
+                                </blockquote>
+                                <blockquote class="blockquote blockquote-reverse col-md-4">
+                                    <p class="mb-0">The staff was kind and helpful! My puppy's shots were done quick.</p>
+                                    <footer class="blockquote-footer">Michael J. <cite title="Source Title">Yelp.com </cite></footer>
+                                </blockquote>
+                            </div>
+                            <div class="carousel-item">
+                                <blockquote class="blockquote blockquote-reverse col-md-4">
+                                    <p class="mb-0">I found my new best friend and loving companion! Thanks guys</p>
+                                    <footer class="blockquote-footer">Angelina J. <cite title="Source Title">Yelp.com</cite></footer>
+                                </blockquote>
+                                <blockquote class="blockquote blockquote-reverse col-md-4">
+                                    <p class="mb-0">I love that you have walk-in hours available and bvery quick service.</p>
+                                    <footer class="blockquote-footer">Britney S. <cite title="Source Title">Yelp.com</cite></footer>
+                                </blockquote>
+                                <blockquote class="blockquote blockquote-reverse col-md-4">
+                                    <p class="mb-0">Wow! I went to look at adobtable pets and I noticed they really take care of them.</p>
+                                    <footer class="blockquote-footer">Jeremy R. <cite title="Source Title">Yelp.com</cite></footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CUSTOMERS -->
+
+    <!-- SOCIAL -->
+    <section id='social'>
+        <div class='container'>
+            <div class='row'>
+
+                <div class='col-md-6'>
+                    <h2>CONNECT WITH US!</h2>
+                    <hr align='left' width='50%' />
+                    <p>4242 South 300 West, Murray, Utah 84107 - (801) 261·2919 <br /> Adoption Hours: Mon - Sat 10 - 7 / Sun 12 - 5 <br /> Clinic Hours: Mon - Thu 9 - 12 and 1 - 6 / Fri 9 - 12 and 1 - 4 / Sat 9 - 3 / Sun CLSD</p>
+                </div>
+
+                <div class='col-md-6'>
+                    <ul class='list-inline'>
+                        <li class='list-inline-item'><a href='https://www.facebook.com/HumaneSocietyOfUtah'><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class='list-inline-item'><a href='https://www.twitter.com/utahhumane'><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class='list-inline-item'><a href='https://www.instagram.com/humanesocietyofutah'><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END SOCIAL -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            mobile: false // default
+        })
+        wow.init();
+    </script>
+    <script src='./js/app.js'></script>
+    <script src='./js/mainCtrl.js'></script>
+    <script src='./js/mainService.js'></script>
+</body>
+
+</html>

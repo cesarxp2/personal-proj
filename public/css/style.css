@@ -1,0 +1,270 @@
+html, body {
+    font-family: 'Alegreya Sans', sans-serif;
+    height: 100%;
+}
+
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+@media(max-width: 768px) {
+    #header {
+        text-align: center;
+    }
+    #header img {
+        margin: 0 auto;
+        opacity: 0.7;
+        width: 50vw;
+    }
+    #social {
+        text-align: center;
+    }
+    #social hr {
+        margin: 8% auto;
+    }
+    #donate {
+        padding: 4.25rem 0;
+        background-image: url('../img/kitty.jpg');
+        background-size: 145% 100%!important;
+        background-position-y: 20%;
+        text-align: center!important;
+    }
+    #donate hr {
+        margin: 8% auto;
+    }
+    #donate img {
+        align-self: center;
+    }
+    #adopt button {
+        width: 30%;
+        margin: auto 35%;
+        font-weight: bold;
+        font-size: 2.5vw!important;
+    }
+    #header .btn {
+        width: 50%;
+        height: 5vh;
+        display: inline-flex;
+        margin-top: .5rem;
+        justify-content: center;
+        font-size: 2.4vh;
+    }
+    #header .form-group {
+        margin-bottom: 2rem;
+        width: 50%;
+        height: 1vh;
+        display: inline-flex;
+    }
+    #header p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: .8em;
+    }
+    #header .lead {
+        font-size: .9rem!important;
+        font-weight: 300;
+    }
+    #header h2 {
+        font-size: 1rem;
+    }
+    .alert-success {
+        background-color: #dff0d8!important;
+        border-color: #d0e9c6!important;
+        color: #3c763d!important;
+        margin: 2% auto!important;
+        width: 50%!important;
+        height: 5vh!important;
+        font-size: 1.7vh!important;
+        padding: 0!important;
+    }
+}
+
+.navbar {
+    background-color: rgba(255, 254, 224, 0.5);
+    border-bottom: 1px solid #dedede;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.navbar .nav .nav-item .nav-link {
+    color: black;
+}
+
+.navbar .nav .nav-item .nav-link:hover {
+    color: yellow;
+}
+
+.navbar-toggler {
+    color: black;
+}
+
+.collapse {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+/* HEADER */
+
+#header {
+    background: url('../img/stars-bg.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
+
+#header img {
+    padding: 0 0 20px;
+    width: 80%;
+}
+
+#header .header-right {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+#header .fa {
+    margin: 5% 0;
+}
+
+#header a .fa {
+    color: white;
+}
+
+#header img {
+    border-radius: 50%;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d0e9c6;
+    color: #3c763d;
+    margin: 2% 0;
+    height: 4.5vh;
+    text-align: center;
+}
+
+
+/* SOCIAL */
+
+#social {
+    padding: 4.25rem 0;
+    background-color: hsl(300, 5%, 90%);
+}
+
+#social .fa {
+    font-size: 2em;
+    color: red;
+    border: 2px solid red;
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    text-align: center;
+    padding: 20% 0;
+    margin: 10px 0;
+}
+
+#social .fa:hover {
+    color: white;
+    background: red;
+}
+
+
+/* DONATE */
+
+#donate {
+    padding: 4.25rem 0;
+    background-image: url('../img/kitty.jpg');
+    background-size: cover;
+    background-position-y: 20%;
+}
+
+#donate button {
+    width: 50%;
+    background-color: rgb(117, 73, 139)
+}
+
+#donate button:hover {
+    background: transparent;
+    color: rgb(117, 73, 139);
+}
+
+
+/* ADOPT */
+
+#adopt {
+    padding: 5rem 0;
+}
+
+#adopt .adopt-img {
+    position: relative;
+}
+
+#adopt .adopt-img .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/eye.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+#adopt .adopt-img .img-overlay:hover {
+    opacity: 1;
+    z-index: 1;
+}
+
+#adopt button {
+    background-color: rgb(117, 73, 139);
+    width: 30%;
+    margin: auto 35%;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+#adopt button:hover {
+    background: transparent;
+    color: rgb(117, 73, 139);
+}
+
+
+/* CLINIC */
+
+#clinic {
+    padding: 5rem 0;
+    background-color: hsl(300, 5%, 90%);
+}
+
+#clinic .fa {
+    color: rgb(117, 73, 139);
+    padding: 15px 0;
+}
+
+
+/* CUSTOMERS */
+
+#customers {
+    padding: 5rem 0;
+}
+
+#customers .carousel-indicators li {
+    background-color: rgb(117, 73, 139);
+}
+
+#customers .carousel-inner {
+    margin-bottom: 50px;
+}
+
+#customers .carousel-indicators {
+    margin-bottom: -50px;
+}

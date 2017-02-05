@@ -1,0 +1,98 @@
+/* DONATIONS */
+
+#donations {
+    background: url('https://images.unsplash.com/photo-1456677698485-dceeec22c7fc?dpr=1&auto=format&fit=crop&w=1500&h=1004&q=80&cs=tinysrgb&crop=');
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+#donations .col-md-3 {
+    display: flex;
+    justify-content: center;
+}
+
+#donations p {
+    color: seashell;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#donations .row1 {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, .6);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+}
+
+#donations .row {
+    background: rgba(0, 0, 0, .6);
+}
+
+#donations .row3 {
+    background: rgba(0, 0, 0, .6);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+#donations .hvr-ripple-out:before {
+    content: '';
+    position: absolute;
+    border: seashell solid 1px;
+    border-radius: 5%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: .5s;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#donations .row4 {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+#donations .row4 button {
+    background-color: rgba(247, 222, 126, 0.8);
+    border: rgba(255, 182, 193, 0);
+    color: black;
+}
+
+
+/* SOCIAL */
+
+#social {
+    padding: 4.25rem 0;
+    background-color: hsl(300, 5%, 90%);
+    height: 25vh;
+}
+
+#social .fa {
+    font-size: 2em;
+    color: red;
+    border: 2px solid red;
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    text-align: center;
+    padding: 20% 0;
+    margin: 10px 0;
+}
+
+#social .fa:hover {
+    color: white;
+    background: red;
+}
+
+#social .container {
+    height: 100%;
+}

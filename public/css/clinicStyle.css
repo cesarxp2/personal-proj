@@ -1,0 +1,187 @@
+html, body {
+    font-family: 'Alegreya Sans', sans-serif;
+    height: 100%;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background-color: rgba(255, 254, 224, 0.5);
+    border-bottom: 1px solid #dedede;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.navbar .nav .nav-item .nav-link {
+    color: black;
+}
+
+.navbar .nav .nav-item .nav-link:hover {
+    color: yellow;
+}
+
+.navbar-toggler {
+    color: black;
+}
+
+
+/* HEADER */
+
+#header {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: inherit;
+}
+
+#header video {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    position: absolute;
+    min-height: 100%;
+    object-fit: inherit;
+}
+
+#header .container {
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-around;
+    padding: 0;
+}
+
+#header img {
+    width: 100vw;
+    height: 23vh;
+}
+
+#header .row1 {
+    margin-bottom: 20%;
+}
+
+#header .row3 {
+    display: flex;
+    align-self: center;
+}
+
+#header .row3 .fa {
+    position: absolute;
+    color: white;
+}
+
+#header .row3 .fa:hover {
+    position: absolute;
+    color: lightpink;
+}
+
+
+/* PRICES */
+
+#prices button {
+    height: 5vh;
+    width: 20vw;
+    margin: 0 3px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid;
+}
+
+#prices button:hover {
+    background-color: transparent;
+    color: pink;
+}
+
+#prices .container {
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-between;
+    background: url('https://images.unsplash.com/photo-1455380579765-810023662ea2?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=')
+}
+
+#prices .row {
+    width: 100vw;
+    align-self: center;
+    padding: 4rem;
+}
+
+#prices .row2 {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.card {
+    margin-bottom: 0;
+    border: 1px solid lightgray;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 1.7vh;
+    padding: .5rem;
+    color: white;
+    font-weight: lighter;
+    line-height: 90%;
+}
+
+#prices .price-boxes {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+}
+
+#prices .table {
+    width: auto!important;
+    max-width: 50%!important;
+    display: inline!important;
+    margin: 0 1px;
+}
+
+#prices tbody {
+    background-color: rgba(255, 255, 255, .2);
+    border: 1px solid seashell;
+}
+
+.vacTable {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.show {
+    display: block!important;
+}
+
+
+/* SOCIAL */
+
+#social {
+    padding: 2% 0;
+    background-color: hsl(300, 5%, 90%);
+    height: 20vh
+}
+
+#social .fa {
+    font-size: 2em;
+    color: red;
+    border: 2px solid red;
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    text-align: center;
+    padding: 20% 0;
+    margin: 10px 0;
+}
+
+#social .fa:hover {
+    color: white;
+    background: red;
+}

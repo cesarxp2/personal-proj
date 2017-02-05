@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html ng-app='humaneApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title> CLINIC PAGE </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700" rel="stylesheet">
+    <link rel='stylesheet' href='../css/clinicStyle.css' />
+    <link rel='stylesheet' href='../font-awesome/css/font-awesome.css' />
+    <link rel="stylesheet" href="../font-awesome-animation/dist/font-awesome-animation.min.css" />
+    <link rel="stylesheet" href="../Hover-master/css/hover.css" />
+    <link rel='stylesheet' href='../css/animate.min.css' />
+</head>
+
+<body ng-controller='mainCtrl'>
+
+    <!-- HEADER -->
+
+    <section id='header'>
+        <video autoplay loop src='../img/HumaneClinic.mp4' class='img-fluid'></video>
+        <div class="container">
+            <div class='row row1'>
+                <div class='col-md-12'>
+
+                    <img src='../img/welcome2.png' class='img-fluid' />
+                </div>
+            </div>
+            <div class='row row3'>
+                <a ng-click="scrollTo('prices')"><i class="fa fa-caret-down faa-pulse animated fa-5x" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- END HEADER -->
+
+    <!-- PRICES -->
+    <section id='prices'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-12 price-boxes'>
+
+                    <p> <button class="btn btn-primary clinic1" type="button" data-toggle="collapse" data-toggle="show" data-target="#clinicHours" aria-expanded="true" aria-controls="oneButton" ng-mouseover='hoverPrices()'> CLINIC HOURS </button> </p>
+
+                    <p> <button class="btn btn-primary spay1" type="button" data-toggle="collapse" data-toggle="show" data-target="#spayNeuter" aria-expanded="false" aria-controls="oneButton" ng-mouseover='hoverPrices()'>  SPAY/NEUTER </button> </p>
+
+                    <p> <button class="btn btn-primary vac1" type="button" data-toggle="collapse show" data-target="#vaccinations" aria-expanded="false" aria-controls="oneButton" ng-mouseover='hoverPrices()'> VACCINATIONS </button> </p>
+
+                    <p> <button class="btn btn-primary micro1" type="button" data-toggle="collapse" data-target="#microchips" aria-expanded="false" aria-controls="oneButton" ng-mouseover='hoverPrices()'> MICROCHIPS </button> </p>
+
+                    <p> <button class="btn btn-primary other1" type="button" data-toggle="collapse" data-target="#otherServices" aria-expanded="false" aria-controls="oneButton" ng-mouseover='hoverPrices()'> OTHER SERVICES </button> </p>
+                </div>
+            </div>
+            <div class='row row2'>
+                <div class="collapse" id="clinicHours">
+                    <div class="card card-block wow zoomIn" data-wow-duration="1s">
+                        Spay/Neuter surgeries are done by appointment only Tuesday through Friday. Please call (801) 261-2919 ext. 230 to schedule an appointment. <br/>
+                        <hr width='50%' align='left' /> Vaccinations, Microchips, and heartworm tests are done on a walk-in basis during the following hours (no appointment needed). Although we try to serve all clients, occasional workload demands may require us to discontinue check-in
+                        for services 15 minutes before closing time.
+                        <hr width='50%' align='left' /> <strong>Monday - Thursday 9 AM – Noon, and 1 PM - 6 PM <br/> Friday 9 AM – Noon, and 1 PM - 4 PM <br/> Saturday 9 AM – 3 PM <br/> Sunday CLOSED</strong>
+                    </div>
+                </div>
+
+                <div class="collapse" id="spayNeuter">
+                    <div class="card card-block wow zoomIn" data-wow-duration="1s">
+                        Spay/Neuter surgeries are done by appointment only Tuesday through Friday. Please call (801) 261-2919 ext. 230 to schedule an appointment.
+                        <hr width='50%' align='left' /> Pets MUST be current on vaccinations at least 14 days before surgery. There are additional fees for surgical complications, such as heat, pregnancy, or retained testicles.<br/>
+                        <table class="table table-striped table-sm">
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>Dog Spay - Female</td>
+                                    <td>Up to 50 lbs.</td>
+                                    <td>$68</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td>51 - 70 lbs.</td>
+                                    <td>$78</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td>71 - 85 lbs.</td>
+                                    <td>$89</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td>86 - 99 lbs.</td>
+                                    <td>$99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-striped table-sm">
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>Dog Spay - Male</td>
+                                    <td>Up to 50 lbs.</td>
+                                    <td>$63*</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td>51 - 70 lbs.</td>
+                                    <td>$73*</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td>71 - 85 lbs.</td>
+                                    <td>$84*</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td></td>
+                                    <td>86 - 99 lbs.</td>
+                                    <td>$94*</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-striped table-sm">
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>Cat Spay - Female</td>
+                                    <td>All sizes</td>
+                                    <td>$52</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>Cat Spay - Male</td>
+                                    <td>All sizes</td>
+                                    <td>$42</td>
+                                </tr>
+                            </tbody>
+                        </table><br /> *Includes E-collar to prevent licking & chewing at incision.
+                    </div>
+                </div>
+
+                <div class="collapse" id="vaccinations">
+                    <div class="card card-block wow zoomIn" data-wow-duration="1s">
+                        PUPPY VACCINATIONS <br /> Puppy vaccination sets must be done 3 to 4 weeks apart. If you go longer than 4 weeks between any sets, it is recommended to repeat the last set. If your puppy received vaccinations at younger than 8 weeks,
+                        it is considered an extra set and it will be necessary to give a total of 4 sets instead of 3.
+
+                        <hr width='50%' align='left' /> First SET given at 8-12 Weeks: $27.50 First Distemper/Parvo Combination (includes Adenovirus Type 2 and Parainfluenza) First Deworm for intestinal parasites (Pyrantel for round worms)
+                        <hr width='50%' align='left' /> Second SET given at 12-16 Weeks: $35.50 Second Distemper/Parvo Combination First Bordetella (kennel cough) given intranasally Second Deworm
+                        <hr width='50%' align='left' /> Third SET given at 16-20 Weeks: $35.00 Annual Distemper/Parvo Combination Annual Bordetella One year Rabies (must be at least 12 weeks old to receive)
+                        <hr width='50%' align='left' />
+                        <div class='vacTable'>
+                            <table class="table table-striped table-sm">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p><strong>DOG VACCINATION PACKAGES </strong></p>
+                                            <p> <strong>(Start at 8 weeks old)</strong></p>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Distemper/Parvo Combo, Bordetella &amp; Rabies</p>
+                                        </td>
+                                        <td>$35.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Distemper/Parvo Combo &amp; Bordetella</p>
+                                        </td>
+                                        <td>$29.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Distemper/Parvo Combo, Deworm</p>
+                                            <p>(puppies up to 5 mo.)</p>
+                                        </td>
+                                        <td>$27.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Distemper/Parvo Combo, Bordetella&nbsp;&amp; Deworm</p>
+                                            <p>(puppies up to 5 mo.)</p>
+                                        </td>
+                                        <td>$35.50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-striped table-sm">
+                                <tbody>
+
+                                    <td><strong>DOG INDIVIDUAL VACCINATIONS</strong></td>
+                                    <td>&nbsp;</td>
+
+                                    <tr>
+                                        <td>Distemper/Parvo Combo</td>
+                                        <td>$27.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rabies</td>
+                                        <td>$14.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bordetella only (kennel cough)</td>
+                                        <td>$15.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lyme Disease</td>
+                                        <td>$24.50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-striped table-sm">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p><strong>CAT VACCINATION PACKAGES</strong></p>
+                                            <p> <strong>(Start at 9 weeks old)</strong></p>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Distemper Combo, Leukemia &amp; Rabies</p>
+                                        </td>
+                                        <td>$47.50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Distemper Combo &amp; Leukemia</p>
+                                        </td>
+                                        <td>$40.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Distemper Combo &amp; Rabies</p>
+                                        </td>
+                                        <td>$27.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table table-striped table-sm">
+                                <tbody>
+
+
+                                    <tr>
+                                        <td><strong>CAT INDIVIDUAL VACCINATIONS</strong></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Distemper Combo</td>
+                                        <td>$20.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rabies</td>
+                                        <td>$14.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Feline Leukemia</td>
+                                        <td>$27.50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="collapse" id="microchips">
+                    <div class="card card-block wow zoomIn" data-wow-duration="1s">
+                        Microchips are available on a walk-in basis.<br /><strong>Please see the Hours section above for more information.</strong><br />
+                        <hr width='50%' align='left' />
+
+                        <table class="table table-striped table-sm">
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>Microchip Implant</td>
+                                    <td>$30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="collapse" id="otherServices">
+                    <div class="card card-block wow zoomIn" data-wow-duration="1s">
+
+                        Anal glands, nail clipping, heartworm testing and heartworm medication are available on a walk-in basis. <br /><strong>Please see the Hours section above for more information.</strong>
+                        <hr width='50%' align='left' />
+
+                        <table class="table table-striped table-sm">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>Canine Anal Gland Expression</p>
+                                    </td>
+                                    <td>
+                                        <p>$15.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="
+    line-height: 100%;">
+                                        <p>Nail Clip</p>
+                                        </td>
+                                        <td>
+                                            <p>$15.00</p>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td style="
+    line-height: 100%;">
+                                        <p>Canine Heartworm Test&nbsp;</p>
+                                        </td>
+                                        <td>$25.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="
+    line-height: 100%;">
+                                        <p>Deworm\</p>
+                                        </td>
+                                        <td>$7.50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-striped table-sm">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" style="
+    line-height: 100%;">
+                                        <p>&nbsp;</p>
+                                        <p><strong>Tri-Heart&nbsp;Plus (Heartworm medication)</strong></p>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="
+    line-height: 100%;">
+                                        <p>&nbsp;</p>
+                                        <p><strong>Proof of negative heartworm test dated within the last<br /> 6 months required to purchase heartworm medication.</strong></p>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>&nbsp; Up to 25 lbs.</p>
+                                    </td>
+                                    <td>
+                                        <p>$28.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>&nbsp; 26 - 50 lbs.</p>
+                                    </td>
+                                    <td>$32.00</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp; 51 - 100 lbs.</td>
+                                    <td>$42.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-striped table-sm">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2" style="
+    line-height: 100%;">
+                                        <p>&nbsp;</p>
+                                        <p><strong>Owner requested euthanasia by injection (EBI) is done by appointment only. <br />Please call (801) 261-2919 ext. 230 to schedule an appointment.</strong></p>
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <strong><p>When a pet is euthanized through our Clinic, you can be present with your pet. <br />For another option in which you will not be present with your pet, visit our <br /><a href="https://www.utahhumane.org/our-programs/receiving">Receiving department</a>&nbsp;(euthanasia is performed by injection via Receiving as well).</strong>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Up to 70 lbs.</td>
+                                    <td>$70.00</td>
+                                </tr>
+                                <tr>
+                                    <td>71 to 100 lbs.</td>
+                                    <td>$85.00</td>
+                                </tr>
+                                <tr>
+                                    <td>101+ lbs.</td>
+                                    <td>$105.00, plus $2.00 per pound over 101 lbs.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END PRICES -->
+    <!-- SOCIAL -->
+    <section id='social'>
+        <div class='container'>
+            <div class='row'>
+
+                <div class='col-md-6'>
+                    <h2>CONNECT WITH US!</h2>
+                    <hr align='left' width='50%' />
+                    <p>4242 South 300 West, Murray, Utah 84107 - (801) 261·2919 <br /> Adoption Hours: Mon - Sat 10 - 7 / Sun 12 - 5 <br /> Clinic Hours: Mon - Thu 9 - 12 and 1 - 6 / Fri 9 - 12 and 1 - 4 / Sat 9 - 3 / Sun CLSD</p>
+                </div>
+
+                <div class='col-md-6'>
+                    <ul class='list-inline'>
+                        <li class='list-inline-item'><a href='https://www.facebook.com/HumaneSocietyOfUtah'><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class='list-inline-item'><a href='https://www.twitter.com/utahhumane'><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class='list-inline-item'><a href='https://www.instagram.com/humanesocietyofutah'><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END SOCIAL -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <script src='../js/app.js'></script>
+    <script src='../js/mainCtrl.js'></script>
+    <script src='../js/mainService.js'></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            mobile: false // default
+        })
+        wow.init();
+    </script>
+
+</body>
+
+</html>

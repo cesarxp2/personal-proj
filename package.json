@@ -1,0 +1,31 @@
+{
+  "name": "personal-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "font-awesome-animation": "0.0.10",
+    "handlebars": "^4.0.6",
+    "hbs": "^4.0.1",
+    "massive": "^2.5.0",
+    "pug": "^2.0.0-beta10",
+    "stripe": "^4.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cesarxp2/personal-proj.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cesarxp2/personal-proj/issues"
+  },
+  "homepage": "https://github.com/cesarxp2/personal-proj#readme"
+}

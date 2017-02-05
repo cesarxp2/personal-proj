@@ -1,0 +1,112 @@
+/* ADOPT */
+
+
+/*#adoption {
+    padding-top: 5.8vh;
+}*/
+
+#adoption .cont1 {
+    width: 100vw;
+    height: 75vh;
+    background: rgba(255, 182, 193, .5);
+}
+
+#adoption .card-text {
+    overflow: scroll;
+}
+
+#adoption .form-inline {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    text-align: center;
+    height: 100%;
+    font-size: 1.3vh;
+}
+
+#adoption .card {
+    overflow: scroll;
+}
+
+.hvr-shutter-out-vertical:before {
+    background: hsla(49, 94%, 75%, 0.69)!important;
+}
+
+.card-title {
+    font-size: 2vh!important;
+}
+
+.card-img-top {
+    height: 50%!important;
+    width: 100%!important;
+}
+
+.morePic {
+    height: 50%!important;
+    width: 100%!important;
+}
+
+.card-deck {
+    display: inline-flex;
+    margin-bottom: .75rem;
+    table-layout: fixed;
+    border-spacing: 4rem 0;
+    justify-content: space-around;
+    max-height: 20vh;
+    font-size: small;
+    height: 20vh;
+    max-width: 10vw;
+    text-align: center;
+}
+
+#adoption .rw1 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    height: 45%;
+}
+
+#adoption .rw0 {
+    display: flex;
+    justify-content: center;
+}
+
+#adoption .btn-primary {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+}
+
+#rightArrow {
+    display: none;
+}
+
+
+/* SOCIAL */
+
+#social {
+    padding: 2% 0;
+    background-color: hsl(300, 5%, 90%);
+    height: 25vh
+}
+
+#social .fa {
+    font-size: 2em;
+    color: red;
+    border: 2px solid red;
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    text-align: center;
+    padding: 20% 0;
+    margin: 10px 0;
+}
+
+#social .fa:hover {
+    color: white;
+    background: red;
+}

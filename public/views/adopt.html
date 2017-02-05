@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html ng-app='humaneApp'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title> CLINIC PAGE </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700" rel="stylesheet">
+    <link rel='stylesheet' href='../css/adoptStyle.css' />
+    <link rel='stylesheet' href='../font-awesome/css/font-awesome.css' />
+    <link rel="stylesheet" href="../font-awesome-animation/dist/font-awesome-animation.min.css" />
+    <link rel="stylesheet" href="../Hover-master/css/hover.css" />
+    <link rel='stylesheet' href='../css/animate.min.css' />
+</head>
+
+<body ng-controller='mainCtrl'>
+
+    <!-- ADOPT -->
+
+    <section id='adoption'>
+        <div class='container cont1' width='100vw' height='30vh'>
+            <div class='row rw0'>
+                <img src='../img/adoption.png' class='img-fluid' />
+            </div>
+            <div class='row rw1'>
+
+                <!-- TESTING -->
+                <form class="form-inline">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Type</label>
+                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name='animal' ng-model='animal'>
+    <option selected>Choose...</option>
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+  </select>
+
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Age</label>
+                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect" name="age" ng-model="age">
+  <option selected>Choose...</option>
+  <option value="baby" >Baby</option>
+  <option value="young" >Young</option>
+  <option value="adult" >Adult</option>
+  <option value="senior" >Senior</option>
+  </select>
+
+
+                    <label class="mr-sm-2" for="inlineFormInput">Zip Code</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="12345" ng-model='location'>
+
+
+                    <button type="submit" class="btn btn-primary" ng-click='petFinder(animal, age, location)' id='mainBtn'>Submit</button>
+                </form>
+
+
+
+
+
+
+                <!-- TESTING -->
+            </div>
+        </div>
+
+        <div class='container cont2'>
+            <div class='row'>
+                <div class='col-md-2 col-sm-12' ng-repeat-start='pet in pets'>
+                    <div class="card-deck">
+                        <div class="card hvr-grow">
+                            <img class="card-img-top" src="{{pet.media.photos.photo[0].$t}}" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">{{pet.name.$t}}</h4>
+                                <p class="card-text">Breed: <strong>{{pet.breeds.breed.$t}}</strong> <br /> Age: <strong>{{pet.age.$t}}</strong><br /> Sex: <strong>{{pet.sex.$t}}</strong> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clearfix" ng-if="($index+1)%6==0"></div>
+                <div ng-repeat-end=""></div>
+                <i class="fa fa-arrow-circle-o-right fa-2x" id='rightArrow' aria-hidden="true" ng-click='petFinder(animal, age, location)'></i>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- END ADOPT -->
+    <!-- SOCIAL -->
+    <section id='social'>
+        <div class='container'>
+            <div class='row'>
+
+                <div class='col-md-6'>
+                    <h2>CONNECT WITH US! </h2>
+                    <hr align='left' width='50%' />
+                    <p>4242 South 300 West, Murray, Utah 84107 - (801) 261·2919 <br /> Adoption Hours: Mon - Sat 10 - 7 / Sun 12 - 5 <br /> Clinic Hours: Mon - Thu 9 - 12 and 1 - 6 / Fri 9 - 12 and 1 - 4 / Sat 9 - 3 / Sun CLSD</p>
+                </div>
+
+                <div class='col-md-6'>
+                    <ul class='list-inline'>
+                        <li class='list-inline-item'><a href='https://www.facebook.com/HumaneSocietyOfUtah'><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li class='list-inline-item'><a href='https://www.twitter.com/utahhumane'><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li class='list-inline-item'><a href='https://www.instagram.com/humanesocietyofutah'><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END SOCIAL -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="../js/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            mobile: false // default
+        })
+        wow.init();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <script src='../js/app.js'></script>
+    <script src='../js/mainCtrl.js'></script>
+    <script src='../js/mainService.js'></script>
+
+</body>
+
+</html>
