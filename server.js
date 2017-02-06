@@ -5,8 +5,8 @@ const db = Massive.connectSync({
     db: 'cesargarcia'
 });
 
-const keyPublishable = process.env.PUBLISHABLE_KEY;
-const keySecret = process.env.SECRET_KEY;
+const keyPublishable = 'pk_test_ybmsJKzVtoxdhkx7tN6lUjRL';
+const keySecret = 'sk_test_0l6ZPAhCkVfA9tOIjjNZ0llH';
 const app = module.exports = express();
 const stripe = require("stripe")(keySecret);
 
