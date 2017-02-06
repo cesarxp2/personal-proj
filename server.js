@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const pug = require('pug');
 const Massive = require('massive');
 const db = Massive.connectSync({
     db: 'cesargarcia'
@@ -20,12 +19,11 @@ app.use(bodyParser.json())
 
 app.post("/charge", (req, res) => {
 
-    console.log(req.body);
-    var newDonation = {
-        email: req.body.email,
-        amount_donated: req.body.amount / 100
-    };
-    var save = db.donationsmade.saveSync(newDonation);
+    // var newDonation = {
+    //     email: req.body.email,
+    //     amount_donated: req.body.amount / 100
+    // };
+    // var save = db.donationsmade.saveSync(newDonation);
 
     stripe.customers.create({
             email: req.body.email,
@@ -40,9 +38,31 @@ app.post("/charge", (req, res) => {
             }))
         .then(charge => res.send(charge));
 
+    db.findUserByEmail([req.body.email], (err, result) => {
+        console.log(req.body)
+        console.log(result)
+        console.log(result[0])
+
+        let realAmount = req.body.amount / 100;
+
+        if (result[0]) {
+            db.createDonation([realAmount, req.body.email, result[0].id], (err, donation) => {
+
+            })
+        } else {
+            db.createUser([req.body.name, req.body.email], (err, user) => {
+                console.log(user)
+                db.createDonation([realAmount, req.body.email, user[0].id], (err, newUser) => {
+
+
+                })
+            });
+        }
+    })
+
 });
 // // END STRIPE ~~
-
+//
 // app.post('/donation', function(req, res) {
 //
 //     db.findUserByEmail([req.body.email], function(err, result) {
@@ -66,18 +86,18 @@ app.post("/charge", (req, res) => {
 
 
 app.post('/api/user', (req, res) => {
-    var newUser = {
+    let newUser = {
         name: req.body.name,
         email: req.body.email
     };
-    var save = db.HumaneNewsletter.saveSync(newUser);
+    let save = db.HumaneNewsletter.saveSync(newUser);
 
     console.log(req.body);
     console.log(save);
 })
 
 
-var port = 3000;
+let port = 80;
 app.listen(port, () => {
     console.log(`LISTENING ON PORT ${port}!`)
 })

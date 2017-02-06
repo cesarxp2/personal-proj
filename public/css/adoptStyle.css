@@ -1,9 +1,52 @@
+/* MOBILE */
+
+@media(max-width: 768px) {
+    .rw0 img {
+        margin-top: 10vh!important;
+        height: 20vh!important;
+    }
+    #adoption .form-inline {
+        width: 50vw!important;
+    }
+    #social {
+        height: 55vh!important;
+    }
+    #adoption .rw1 {
+        height: 50vh!important;
+    }
+    #adoption .cont1 {
+        height: 80vh!important;
+    }
+}
+
+.navbar {
+    background-color: rgba(255, 254, 224, 0.5);
+    border-bottom: 1px solid #dedede;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+.navbar .nav .nav-item .nav-link {
+    color: black;
+}
+
+.navbar .nav .nav-item .nav-link:hover {
+    color: yellow;
+}
+
+.navbar-toggler {
+    color: black;
+}
+
+.collapse {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
 /* ADOPT */
-
-
-/*#adoption {
-    padding-top: 5.8vh;
-}*/
 
 #adoption .cont1 {
     width: 100vw;

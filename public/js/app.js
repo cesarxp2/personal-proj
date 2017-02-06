@@ -25,16 +25,16 @@ angular.module('humaneApp', ['ui.router'])
             });
     })
 
-    .directive('stripeDirective', function(mainService) {
+    .directive('stripeDirective', (mainService) => {
         return {
             restrict: 'EA',
             template: "<button style='background-color: transparent; color: #fad874; border: 0px;'> Donate ${{amount}} </button>",
             link: (scope, element, attr) => {
-                var handler = StripeCheckout.configure({
+                let handler = StripeCheckout.configure({
                     key: 'pk_test_ybmsJKzVtoxdhkx7tN6lUjRL',
                     image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
                     locale: 'auto',
-                    token: function(token) {
+                    token: (token) => {
                         // You can access the token ID with `token.id`.
                         // Get the token ID to your server-side code for use.
                         token.amount = scope.amount * 100;
@@ -42,7 +42,7 @@ angular.module('humaneApp', ['ui.router'])
                     }
                 });
 
-                document.getElementById(attr.id).addEventListener('click', function(e) {
+                document.getElementById(attr.id).addEventListener('click', (e) => {
                     // Open Checkout with further options:
                     handler.open({
                         name: 'Utah Humane Society',
@@ -53,7 +53,7 @@ angular.module('humaneApp', ['ui.router'])
                 });
 
                 // Close Checkout on page navigation:
-                window.addEventListener('popstate', function() {
+                window.addEventListener('popstate', () => {
                     handler.close();
                 });
 

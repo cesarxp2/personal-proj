@@ -1,3 +1,57 @@
+/* MOBILE */
+
+@media(max-width: 768px) {
+    #donations {
+        background: url(https://images.unsplash.com/photo-1456677698485-dceeec22c7fc?dpr=1&auto=format&fit=crop&w=1500&h=1004&q=80&cs=tinysrgb&crop=)!important;
+        background-size: 100% 120%!important;
+        background-repeat: no-repeat!important;
+        width: 100vw!important;
+        display: flex!important;
+        align-items: center!important;
+        height: auto!important;
+    }
+    #donations .container {
+        width: 100vw!important;
+        margin-top: 9vh!important;
+    }
+    .btn {
+        margin-top: 5%!important;
+        margin-bottom: 5%!important;
+    }
+    .row2 {
+        display: none!important;
+    }
+    #social {
+        height: 65vh!important;
+    }
+    #donations img {
+        height: 15vh!important;
+    }
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background-color: rgba(255, 254, 224, 0.5);
+    border-bottom: 1px solid #dedede;
+    font-family: 'Alegreya Sans', sans-serif;
+    width: 100vw;
+}
+
+.navbar .nav .nav-item .nav-link {
+    color: black;
+}
+
+.navbar .nav .nav-item .nav-link:hover {
+    color: yellow;
+}
+
+.navbar-toggler {
+    color: black;
+}
+
+
 /* DONATIONS */
 
 #donations {

@@ -4,12 +4,91 @@ html, body {
 }
 
 
+/* MOBILE */
+
+@media(max-width: 768px) {
+    #header video {
+        display: none;
+    }
+    #header {
+        background: url('../img/clinic.jpg')!important;
+        background-size: 200% 100%!important;
+        background-position: center!important;
+    }
+    #header .row3 .fa {
+        position: absolute!important;
+        color: black!important;
+        margin-top: 30%!important;
+    }
+    #prices button {
+        height: 5vh!important;
+        width: 50vw!important;
+        margin: 0 3px!important;
+        background-color: rgba(0, 0, 0, 0.6)!important;
+        border: 1px solid!important;
+    }
+    #prices .price-boxes {
+        flex-direction: column!important;
+        display: flex!important;
+        justify-content: space-around!important;
+        align-items: center!important;
+    }
+    .vacTable {
+        display: flex!important;
+        align-items: center!important;
+        flex-direction: column!important;
+        justify-content: space-around!important;
+        padding: 20px!important;
+    }
+    .show {
+        display: flex!important;
+        height: 35vh!important;
+    }
+    #prices .row2 {
+        width: 100vw!important;
+        display: flex!important;
+        align-items: center!important;
+        justify-content: center!important;
+        padding: 1%!important;
+        overflow: scroll!important;
+        height: 100vh!important;
+    }
+    .card .card-block {
+        height: 100vh!important;
+    }
+    #prices .row {
+        width: 100vw!important;
+        align-self: center!important;
+        padding: 1rem!important;
+        padding-top: 3rem!important;
+    }
+    #social {
+        padding: 2% 0;
+        background-color: hsl(300, 5%, 90%);
+        height: 55vh!important;
+    }
+    #prices .container {
+        width: 100vw;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh!important;
+        justify-content: space-between;
+        background: url('https://images.unsplash.com/photo-1455380579765-810023662ea2?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=');
+    }
+    .card {
+        line-height: normal!important;
+    }
+}
+
+
 /* NAVBAR */
 
 .navbar {
     background-color: rgba(255, 254, 224, 0.5);
     border-bottom: 1px solid #dedede;
     font-family: 'Alegreya Sans', sans-serif;
+    width: 100vw;
 }
 
 .navbar .nav .nav-item .nav-link {

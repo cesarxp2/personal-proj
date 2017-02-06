@@ -24,33 +24,33 @@ angular.module('humaneApp').controller('mainCtrl', function($scope, $location, $
     // Hover on prices for Clinic
 
     $scope.hoverPrices = () => {
-        $('.clinic1').hover(function() {
+        $('.clinic1').hover(() => {
             $('#clinicHours').addClass("show");
-        }, function() {
+        }, () => {
             $('#clinicHours').removeClass('show');
         });
 
-        $('.spay1').hover(function() {
+        $('.spay1').hover(() => {
             $('#spayNeuter').addClass("show");
-        }, function() {
+        }, () => {
             $('#spayNeuter').removeClass('show');
         });
 
-        $('.vac1').hover(function() {
+        $('.vac1').hover(() => {
             $('#vaccinations').addClass("show");
-        }, function() {
+        }, () => {
             $('#vaccinations').removeClass('show');
         });
 
-        $('.micro1').hover(function() {
+        $('.micro1').hover(() => {
             $('#microchips').addClass("show");
-        }, function() {
+        }, () => {
             $('#microchips').removeClass('show');
         });
 
-        $('.other1').hover(function() {
+        $('.other1').hover(() => {
             $('#otherServices').addClass("show");
-        }, function() {
+        }, () => {
             $('#otherServices').removeClass('show');
         });
     };
@@ -72,7 +72,7 @@ angular.module('humaneApp').controller('mainCtrl', function($scope, $location, $
     // Pet Finder API
     $scope.count = -1;
     $scope.petFinder = (animal, age, location, offset, count) => {
-        var takeTime = () => {
+        let takeTime = () => {
             $('#rightArrow').css("display", "block")
         };
         setTimeout(takeTime, 2000);
